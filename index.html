@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Parker & Bailey Wedding</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Italianno" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <canvas class="background" id="canvas"></canvas>
+        <div class="overlay"></div>
+
+        <!-- Add your site or application content here -->
+        <div class="content">
+            <div class="navigation">
+                <a class="navigation-link" data-href="details">
+                    Details
+                </a>
+                <a class="navigation-link" data-href="registry">
+                    Registry
+                </a>
+                <a class="navigation-link" data-href="rsvp">
+                    RSVP
+                </a>
+            </div>
+            <div class="masthead">
+                <div class="heading">
+                    Kennedy & Pieter
+                    <div id="imprint"></div>
+                    <div class="subheading">Are getting married</div>
+                </div>
+            </div>
+
+            <div class="sections">
+                <section class="section" id="details">
+                    <div class="section-content">
+                        <div class="section-header">Details</div>
+                        <div class="section-subheader">You're invited to our wedding on June 9, 2017</div>
+
+                        <div class="hotel">Fairmont Hotel Macdonald</div>
+
+                        <div class="address">10065 100 St NW</div>
+                        <div class="address">Edmonton, AB T5J 0N6</div>
+
+                        <div class="phone">(780) 424–5181</div>
+
+                        <div class="notice">FOOD AND MERRIMENT TO FOLLOW</div>
+
+                        {Mapbox Maps Location Embed}
+                    </div>
+                </section>
+
+                <section class="section" id="registry">
+                    <div class="section-content">
+                        <div class="section-header">Registry</div>
+                        <div class="pending">Registries will be announced soon.</div>
+                    </div>
+                </section>
+
+                <section class="section" id="rsvp">
+                    <div class="section-content">
+                        <div class="section-header">RSVP</div>
+                        <form class="form">
+                            <div class="form-row-title">
+                                What's your contact information?
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <input class="form-text" type="email" placeholder="Email" />
+                                </div>
+                                <div class="form-column">
+                                    <input class="form-text" type="text" placeholder="First Name" />
+                                </div>
+                                <div class="form-column">
+                                    <input class="form-text" type="text" placeholder="Last Name" />
+                                </div>
+                            </div>
+
+                            <div class="form-row-title">
+                                Who's your plus one?
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <input class="form-text" type="text" placeholder="First Name" />
+                                </div>
+                                <div class="form-column">
+                                    <input class="form-text" type="text" placeholder="Last Name" />
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-column form-label">Will you be attending?</div>
+                                <div class="form-column switch">
+                                    <input id="coming" class="toggle toggle-yes-no" type="checkbox">
+                                    <label for="coming" class="toggle-label" data-on="Yes" data-off="No"></label>
+                                  </div>
+                            </div>
+
+                            <div class="form-row">
+                                <textarea class="form-text long-form" placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <button class="form-button" type="submit">Confirm RSVP</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+        <!-- Kenburns -->
+        <script src="js/vendor/kenburned.js"></script>
+        <!-- Vivus -->
+        <script src="//cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCMiiqicPnAwLSmfh0KOWL_IP77m6EB7n4",
+            authDomain: "wedding-e512c.firebaseapp.com",
+            databaseURL: "https://wedding-e512c.firebaseio.com",
+            storageBucket: "wedding-e512c.appspot.com",
+            messagingSenderId: "809062421042"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
