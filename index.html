@@ -20,13 +20,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <canvas class="background" id="canvas"></canvas>
-        <div class="overlay"></div>
+        <div class="background"></div>
+        <!--div class="overlay"></div-->
 
         <!-- Add your site or application content here -->
         <div class="content">
             <div class="navigation">
-                <a class="navigation-link" data-href="details">
+                <a class="navigation-link active" data-href="details">
                     Details
                 </a>
                 <a class="navigation-link" data-href="registry">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="sections">
-                <section class="section" id="details">
+                <section class="section active" id="details">
                     <div class="section-content">
                         <div class="section-header">Details</div>
                         <div class="section-subheader">You're invited to our wedding on June 9, 2017</div>
@@ -57,9 +57,13 @@
 
                         <div class="phone">(780) 424–5181</div>
 
+                        <div class="book">If you'd like to stay the night, you're more then welcome to book a room at a discount rate <a class="link" target="_blank" href="https://resweb.passkey.com/go/baileyparker">here</a></div>
+
                         <div class="notice">FOOD AND MERRIMENT TO FOLLOW</div>
 
-                        {Mapbox Maps Location Embed}
+                        <div class="map-holder">
+                            <div class="map"></div>
+                        </div>
                     </div>
                 </section>
 
@@ -73,7 +77,7 @@
                 <section class="section" id="rsvp">
                     <div class="section-content">
                         <div class="section-header">RSVP</div>
-                        <form class="form">
+                        <form id="rsvp-form" class="form">
                             <div class="form-row-title">
                                 What's your contact information?
                             </div>
@@ -102,10 +106,18 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-column form-label">Will you be attending?</div>
+                                <div class="form-column form-label">Will you be attending the Ceremony?</div>
                                 <div class="form-column switch">
-                                    <input id="coming" class="toggle toggle-yes-no" type="checkbox">
-                                    <label for="coming" class="toggle-label" data-on="Yes" data-off="No"></label>
+                                    <input id="coming-ceremony" class="toggle toggle-yes-no" type="checkbox">
+                                    <label for="coming-ceremony" class="toggle-label" data-on="Yes" data-off="No"></label>
+                                  </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-column form-label">Will you be attending the Reception?</div>
+                                <div class="form-column switch">
+                                    <input id="coming-reception" class="toggle toggle-yes-no" type="checkbox">
+                                    <label for="coming-reception" class="toggle-label" data-on="Yes" data-off="No"></label>
                                   </div>
                             </div>
 

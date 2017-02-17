@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var canvas = $('#canvas');
+  /* var canvas = $('#canvas');
   canvas.attr('width', $(window).width());
   canvas.attr('height', $(window).height());
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
     var width = $(window).width();
     var height = $(window).height();
     kb.resize(width, height);
-  });
+  });*/
 
   // Handle Masthead Imprint
   /* var imprint = new Vivus('imprint', {
