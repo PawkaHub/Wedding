@@ -25,17 +25,6 @@
 
         <!-- Add your site or application content here -->
         <div class="content">
-            <div class="navigation">
-                <a class="navigation-link active" data-href="details">
-                    Details
-                </a>
-                <a class="navigation-link" data-href="registry">
-                    Registry
-                </a>
-                <a class="navigation-link" data-href="rsvp">
-                    RSVP
-                </a>
-            </div>
             <div class="masthead">
                 <div class="heading">
                     Kennedy & Pieter
@@ -45,53 +34,11 @@
             </div>
 
             <div class="sections">
-                <section class="section active" id="details">
+
+                <section class="section active" id="rsvp">
                     <div class="section-content">
-                        <div class="section-header">Details</div>
-                        <div class="section-subheader">You're invited to our wedding on June 9, 2017</div>
-
-                        <div class="hotel">Fairmont Hotel Macdonald</div>
-
-                        <div class="address">10065 100 St NW</div>
-                        <div class="address">Edmonton, AB T5J 0N6</div>
-
-                        <div class="phone">(780) 424–5181</div>
-
-                        <div class="book">If you'd like to stay the night, you're more then welcome to book a room at a discount rate <a class="link" target="_blank" href="https://resweb.passkey.com/go/baileyparker">here</a></div>
-
-                        <div class="notice">FOOD AND MERRIMENT TO FOLLOW</div>
-
-                        <div class="map-holder">
-                            <div class="map"></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section" id="registry">
-                    <div class="section-content">
-                        <div class="section-header">Registry</div>
-                        <div class="pending">Registries will be announced soon.</div>
-                    </div>
-                </section>
-
-                <section class="section" id="rsvp">
-                    <div class="section-content">
-                        <div class="section-header">RSVP</div>
-                        <form id="rsvp-form" class="form">
-                            <div class="form-row-title">
-                                What's your contact information?
-                            </div>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <input name="guest-email" id="guest-email" class="form-text" type="email" placeholder="Email" />
-                                </div>
-                                <div class="form-column">
-                                    <input name="guest-first-name" id="guest-first-name" class="form-text" type="text" placeholder="First Name" />
-                                </div>
-                                <div class="form-column">
-                                    <input name="guest-last-name" id="guest-last-name" class="form-text" type="text" placeholder="Last Name" />
-                                </div>
-                            </div>
+                        <div class="section-header">Plus One</div>
+                        <form id="plus-one-form" class="form">
 
                             <div class="form-row-title">
                                 Who's your plus one?
@@ -106,18 +53,18 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-column form-label">Will you be attending the Ceremony?</div>
+                                <div class="form-column form-label">Will they be attending the Ceremony?</div>
                                 <div class="form-column switch">
-                                    <input name="coming-ceremony" id="coming-ceremony" class="toggle toggle-yes-no" type="checkbox" value="off">
-                                    <label for="coming-ceremony" class="toggle-label" data-on="Yes" data-off="No"></label>
+                                    <input name="plus-one-coming-ceremony" id="plus-one-coming-ceremony" class="toggle toggle-yes-no" type="checkbox" value="off">
+                                    <label for="plus-one-coming-ceremony" class="toggle-label" data-on="Yes" data-off="No"></label>
                                   </div>
                             </div>
 
                             <div class="form-row">
-                                <div class="form-column form-label">Will you be attending the Reception?</div>
+                                <div class="form-column form-label">Will they be attending the Reception?</div>
                                 <div class="form-column switch">
-                                    <input name="coming-reception" id="coming-reception" class="toggle toggle-yes-no" type="checkbox" value="off">
-                                    <label for="coming-reception" class="toggle-label" data-on="Yes" data-off="No"></label>
+                                    <input name="plus-one-coming-reception" id="plus-one-coming-reception" class="toggle toggle-yes-no" type="checkbox" value="off">
+                                    <label for="plus-one-coming-reception" class="toggle-label" data-on="Yes" data-off="No"></label>
                                   </div>
                             </div>
 
@@ -129,7 +76,7 @@
                             </div>
 
                             <div class="form-row">
-                                <button class="form-button" type="submit">Confirm RSVP</button>
+                                <button class="form-button" type="submit">Confirm Plus One's RSVP</button>
                             </div>
                         </form>
                     </div>
