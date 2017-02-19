@@ -307,6 +307,55 @@ svg * {
     box-shadow: 0 0 5px rgba(68,68,68,0.2);
 }
 
+.message {
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    left: 40px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    pointer-events: none;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    -webkit-transition: -webkit-transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    -moz-transition: -moz-transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    transform: translate3d(0,-200%,0);
+    -webkit-transform: translate3d(0,-200%,0);
+    -moz-transform: translate3d(0,-200%,0);
+    opacity: 0;
+}
+
+.message.mobile {
+    top: 56px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 0;
+    display: none;
+}
+
+.message.loading {
+    background-color: #3498db;
+}
+
+.message.error {
+    background-color: #e74c3c;
+}
+
+.message.success {
+    background-color: #2ecc71;
+}
+
+.message.active {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    opacity: 1;
+}
+
 .section-header {
     color: #444444;
     font-family: 'Italianno', cursive;
@@ -413,6 +462,7 @@ svg * {
 /* RSVP */
 #rsvp .section-content {
     height: auto;
+    overflow: hidden;
     /* max-height: 600px; */
 }
 
@@ -634,6 +684,12 @@ svg * {
     }
     .navigation {
         border-radius: 0;
+    }
+    .section-content .message {
+        display: none;
+    }
+    .message.mobile {
+        display: block;
     }
 }
 
