@@ -1,11 +1,37 @@
-$(document).ready(function() {
-  // Handle Form Submission
-  var form = $('#rsvp-form');
-  form.submit(function(e) {
-    e.preventDefault();
-    var data = $(this).serializeArray();
-    console.log('formSubmit', data);
+// Add Serialize Object to jQuery prototype for easy access to form data as an object for insertion into Firebase
+$.fn.serializeObject = function()
+{
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function() {
+     if (o[this.name]) {
+         if (!o[this.name].push) {
+             o[this.name] = [o[this.name]];
+         }
+         o[this.name].push(this.value || '');
+     } else {
+         o[this.name] = this.value || '';
+     }
   });
+  return o;
+};
+
+$(document).ready(function() {
+  // Handle Guest RSVP Form Submission
+  var guestForm = $('#guest-rsvp-form');
+  guestForm.submit(function(e) {
+    e.preventDefault();
+    var data = $(this).serializeObject();
+    console.log('guestForm', data);
+  });
+
+  // Handle Plus One RSVP Form Submission
+  var plusOneForm = $('#plus-one-rsvp-form');
+  plusOneForm.submit(function(e) {
+    e.preventDefault();
+    var data = $(this).serializeObject();
+    console.log('plusOneForm', data);
+  })
 
   // Handle Navigation
   var links = $('.navigation-link');

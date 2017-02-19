@@ -38,7 +38,16 @@
                 <section class="section active" id="rsvp">
                     <div class="section-content">
                         <div class="section-header">Plus One</div>
-                        <form id="plus-one-form" class="form">
+                        <form id="plus-one-rsvp-form" class="form">
+
+                            <div class="form-row-title">
+                                What's the email that you RSVPed with?
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <input name="plus-one-main-guest-email" id="guest-email" class="form-text" type="email" placeholder="Email" />
+                                </div>
+                            </div>
 
                             <div class="form-row-title">
                                 Who's your plus one?
@@ -55,7 +64,7 @@
                             <div class="form-row">
                                 <div class="form-column form-label">Will they be attending the Ceremony?</div>
                                 <div class="form-column switch">
-                                    <input name="plus-one-coming-ceremony" id="plus-one-coming-ceremony" class="toggle toggle-yes-no" type="checkbox" value="off">
+                                    <input name="plus-one-coming-ceremony" id="plus-one-coming-ceremony" class="toggle toggle-yes-no" type="checkbox">
                                     <label for="plus-one-coming-ceremony" class="toggle-label" data-on="Yes" data-off="No"></label>
                                   </div>
                             </div>
@@ -63,7 +72,7 @@
                             <div class="form-row">
                                 <div class="form-column form-label">Will they be attending the Reception?</div>
                                 <div class="form-column switch">
-                                    <input name="plus-one-coming-reception" id="plus-one-coming-reception" class="toggle toggle-yes-no" type="checkbox" value="off">
+                                    <input name="plus-one-coming-reception" id="plus-one-coming-reception" class="toggle toggle-yes-no" type="checkbox">
                                     <label for="plus-one-coming-reception" class="toggle-label" data-on="Yes" data-off="No"></label>
                                   </div>
                             </div>
@@ -72,7 +81,7 @@
                                 Anything else?
                             </div>
                             <div class="form-row">
-                                <textarea name="guest-message" id="guest-message" class="form-text long-form" placeholder="Message"></textarea>
+                                <textarea name="plus-one-guest-message" id="guest-message" class="form-text long-form" placeholder="Message"></textarea>
                             </div>
 
                             <div class="form-row">
