@@ -75,16 +75,16 @@ $(document).ready(function() {
     var attendingCeremony = data['attending-ceremony'];
     var attendingReception = data['attending-reception'];
     var message = data['message'];
-    // console.log('guestForm', data);
-    console.log('firstName', firstName);
+
+    /* console.log('firstName', firstName);
     console.log('lastName', lastName);
     console.log('attendingCeremony', attendingCeremony);
     console.log('attendingReception', attendingReception);
-    console.log('message', message);
+    console.log('message', message);*/
 
     // Get the fullName for this user
     var fullName = firstName.toLowerCase() + '-' + lastName.toLowerCase();
-    console.log('fullName', fullName);
+    // console.log('fullName', fullName);
 
     if (!firstName) return showError('Please provide a first name.', true);
     if (!lastName) return showError('Please provide a last name.', true);
@@ -95,7 +95,7 @@ $(document).ready(function() {
     // Check for if the fullName exists in our invited collection
     db.ref('invited/' + fullName).once('value').then(function(snap) {
       if (snap.exists()) {
-        console.log('User exists in invite list. Add RSVP info.');
+        // console.log('User exists in invite list. Add RSVP info.');
 
         // Create the payload of data for the user's RSVP
         var payload = {
@@ -110,21 +110,21 @@ $(document).ready(function() {
         // Check for if ref already exists before confirming it.
         db.ref('rsvp/' + fullName).once('value').then(function(snap) {
           if (snap.exists()) {
-            console.log('RSVP already confirmed, show success message');
+            // console.log('RSVP already confirmed, show success message');
             showSuccess();
           } else {
-            console.log('RSVP not created yet, create it.');
+            // console.log('RSVP not created yet, create it.');
             db.ref('rsvp/' + fullName).set(payload).then(function(result) {
-              console.log('RSVP successful', result);
+              // console.log('RSVP successful', result);
               showSuccess();
             }).catch(function(error) {
-              console.log('RSVP error', error);
+              // console.log('RSVP error', error);
               showError();
             });
           }
         });
       } else {
-        console.log('User not invited. Throw error.');
+        // console.log('User not invited. Throw error.');
         showError();
       }
     });
