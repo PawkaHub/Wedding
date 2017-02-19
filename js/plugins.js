@@ -21,4 +21,30 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+// Add Serialize Object to jQuery prototype for easy access to form data as an object for insertion into Firebase
+$.fn.serializeObject = function()
+{
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function() {
+     if (o[this.name]) {
+         if (!o[this.name].push) {
+             o[this.name] = [o[this.name]];
+         }
+         o[this.name].push(this.value || '');
+     } else {
+         o[this.name] = this.value || '';
+     }
+  });
+  return o;
+};
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyCeHHtpJqfLcKeqMnV4tyx7eGnX3jN4bZ8",
+    authDomain: "wedding-57818.firebaseapp.com",
+    databaseURL: "https://wedding-57818.firebaseio.com",
+    storageBucket: "wedding-57818.appspot.com",
+    messagingSenderId: "1054031492307"
+};
+firebase.initializeApp(config);

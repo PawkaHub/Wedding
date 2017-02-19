@@ -41,11 +41,14 @@
                         <form id="plus-one-rsvp-form" class="form">
 
                             <div class="form-row-title">
-                                What's the email that you RSVPed with?
+                                What's your name?
                             </div>
                             <div class="form-row">
                                 <div class="form-column">
-                                    <input name="plus-one-main-guest-email" id="guest-email" class="form-text" type="email" placeholder="Email" />
+                                    <input name="guest-first-name" id="guest-first-name" class="form-text" type="text" placeholder="First Name" />
+                                </div>
+                                <div class="form-column">
+                                    <input name="guest-last-name" id="guest-last-name" class="form-text" type="text" placeholder="Last Name" />
                                 </div>
                             </div>
 
@@ -99,27 +102,6 @@
 
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
-
-        <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyCMiiqicPnAwLSmfh0KOWL_IP77m6EB7n4",
-            authDomain: "wedding-e512c.firebaseapp.com",
-            databaseURL: "https://wedding-e512c.firebaseio.com",
-            storageBucket: "wedding-e512c.appspot.com",
-            messagingSenderId: "809062421042"
-          };
-          firebase.initializeApp(config);
-        </script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+        <script src="/js/plusOneForm.js"></script>
     </body>
 </html>
