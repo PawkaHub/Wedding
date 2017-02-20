@@ -432,14 +432,24 @@ svg * {
     margin-bottom: -40px;
 }
 
-.map {
-    width: 100%;
-    height: 100%;
-    background-color: #444;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-image: url(../img/map.jpg);
+.mapboxgl-canvas-container {
+    position: absolute;;
+}
+
+.mapboxgl-control-container {
+    display: none;
+}
+
+.mapboxgl-popup-content {
+    padding: 15px;
+}
+
+.marker .hotel {
+    margin-bottom: 6px;
+}
+
+.marker .address {
+    font-size: 14px;
 }
 
 .pending {
