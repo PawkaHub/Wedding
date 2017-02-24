@@ -511,6 +511,7 @@ svg * {
     -webkit-appearance: none;
     color: #fff;
     resize: none;
+    border-radius: 0;
 }
 .long-form {
     margin: 0 10px;
