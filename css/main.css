@@ -554,6 +554,7 @@ svg * {
   content: attr(data-off);
   transition: transform 0.5s;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .toggle-yes-no + .toggle-label:after {
   background-color: #8ce196;
@@ -561,6 +562,7 @@ svg * {
   transition: transform 0.5s;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .toggle-yes-no:checked + .toggle-label:before {
   transform: rotateY(180deg);
