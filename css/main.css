@@ -284,6 +284,7 @@ svg * {
     opacity: 0;
     color: #1c1c1c;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .section.active {
