@@ -366,6 +366,12 @@ svg * {
     position: relative;
 }
 
+.section-header-flipped {
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+}
+
 .section-header:after {
     content: '';
     position: absolute;
@@ -468,6 +474,18 @@ svg * {
 #registry {
     /* max-height: 600px; */
     text-align: center;
+}
+
+.stanza {
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.stanza-bottom {
+    margin-bottom: 20px;
 }
 
 /* RSVP */
